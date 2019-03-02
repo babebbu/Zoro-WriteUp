@@ -354,7 +354,7 @@ cp: Missing Operands
 > rwxr-xr-x franky franky sudoers_Im_Coming
 [franky@ubuntu]$ vi sudoers*
 ```
-VIM screen
+ViM screen
 ```
 
 ...
