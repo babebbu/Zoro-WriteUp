@@ -284,10 +284,9 @@ Correct
 
 We found something, Is there a key here? 
 
-
 > Hint: [ 24 x 48 ]
 
-24 lines, 48 characters per line.
+24 lines, 48 characters per line. (Greyscale Image in a nutshell)
 
 ```
 KEY 
