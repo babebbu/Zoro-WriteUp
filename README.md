@@ -475,6 +475,8 @@ Password: 3d2yhijinbe
 [root@ubuntu]# 
 ```
 
+# I am ROOT !!
+
 ```
 [root@ubuntu]# cd /root
 [root@ubuntu]# ls
