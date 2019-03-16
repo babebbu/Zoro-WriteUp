@@ -327,6 +327,20 @@ First nmap: 193 and 550 was knocked as a sequence
 Second nmap: 487 was knocked as a sequence
 ```
 
+NetCat method
+
+```
+$ nc -v TARGET_IP 193
+$ nc -v TARGET_IP 550
+$ nc -v TARGET_IP 478
+```
+
+Knockd method
+```
+# apt install knockd -y
+$ knockd TARGET_IP 193 550 478
+```
+
 Then, The firewall goes down and port 80 is now accessible.
 
 # Shell Injection
