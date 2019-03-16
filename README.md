@@ -260,12 +260,12 @@ import requests
 
 target = "http://members.grandline.htb" # REPLACE TARGET_IP WITH YOUR TARGET IP
 words = open("onepieceCharacterList.txt", "r")
-previousResponseBodySize = 576 # Config Response Body Size Here (You can obtain this value via Network tab in Inspect Elements)
+previousResponseBodySize =  # Config Response Body Size Here (You can obtain this value via Network tab in Inspect Elements)
 
 for word in words:
     r = requests.post(target, data = {'char': word, 'submit': 'submit'})
     if r.status_code == 200:
-	if r.size != previousResponseBodySize
+	if len(r.text) != previousResponseBodySize
             print("/"+word.strip()+"."+extension)
 
 ```
