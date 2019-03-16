@@ -260,7 +260,7 @@ import requests
 
 target = "TARGET_IP:PORT" # REPLACE TARGET_IP WITH YOUR TARGET IP
 words = open("onepieceCharacterList.txt", "r")
-previousResponseBodySize = # Config Response Body Size Here
+previousResponseBodySize = 576 # Config Response Body Size Here (You can obtain this value via Network tab in Inspect Elements)
 
 for word in words:
     r = requests.post(target+'/'+word.strip()+'.'+extension)
