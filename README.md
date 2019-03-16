@@ -252,6 +252,24 @@ Foxy
 
 If it is a correct guessing, The response body will be different.
 
+
+```
+#!/usr/bin/python3
+
+import requests
+
+target = "TARGET_IP:PORT" # REPLACE TARGET_IP WITH YOUR TARGET IP
+words = open("onepieceCharacterList.txt", "r")
+previousResponseBodySize = # Config Response Body Size Here
+
+for word in words:
+    r = requests.post(target+'/'+word.strip()+'.'+extension)
+    if r.status_code == 200:
+	if r.size != previousResponseBodySize
+            print("/"+word.strip()+"."+extension)
+
+```
+
 #### Correct Answer = Foxy
 
 Additional HTML code was in the response body.
