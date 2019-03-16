@@ -213,6 +213,41 @@ Update DNS record again, For members.grandline.htb
 Found a simple web application. There is a form. Just fill the form!
 > The only thing that can be done here is Guessing every characters in One Piece.
 
+Make a word list from https://onepiece.fandom.com/wiki/List_of_Canon_Characters
+
+> Add 'id="characters" to <table>
+
+```
+let names = $("#characters").children("tbody").children("tr").children("td:nth-child(2)")
+
+let makeWordList = (myList) => {
+	let word = ""
+	for(i=0; i<myList.length; i++) 
+		word += (myList[i].innerText + "\n")
+	return word
+}
+
+let wordList = makeWordList(names)
+
+console.log(names)
+```
+
+```
+A.O
+Abdullah
+Absalom
+Acilia
+Adele
+Aggie 68
+.
+.
+.
+Foxy
+.
+.
+.
+```
+
 ### Hypothesis
 
 If it is a correct guessing, The response body will be different.
