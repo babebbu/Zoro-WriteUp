@@ -447,6 +447,7 @@ franky	...				:NOPASSWORD	/bin/cp # Change /bin/cp to /bin/bash
 
 ```
 [franky@ubuntu]$ sudo -s 
+[root@ubuntu]# 
 ```
 
 
@@ -471,6 +472,10 @@ franky:$6$5r7X8q0p$8/mDvW4mkkuXNwmGU78TlE1n3JXf1hHNZwKbZlDjdchRGE.7cRb/IwwclWQtK
 [franky@ubuntu]$ su tester
 [tester@ubuntu]$ sudo -s
 Password: 3d2yhijinbe
+[root@ubuntu]# 
+```
+
+```
 [root@ubuntu]# cd /root
 [root@ubuntu]# ls
 > rwx------		root	root	flag.txt
