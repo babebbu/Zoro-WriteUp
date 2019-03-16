@@ -437,8 +437,8 @@ ViM screen
 ```
 
 ...
-root	ALL=(ALL:ALL)
-franky	...				:NOPASSWORD	/bin/cp # Change /bin/cp to /bin/bash
+root	ALL=(ALL:ALL)	ALL
+franky	ALL=(root)	:NOPASSWORD	/bin/cp # Change /bin/cp to /bin/bash
 ...
 
 
