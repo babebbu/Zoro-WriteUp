@@ -215,7 +215,7 @@ Found a simple web application. There is a form. Just fill the form!
 
 Make a word list from https://onepiece.fandom.com/wiki/List_of_Canon_Characters
 
-> Add 'id="characters" to <table>
+```Add 'id="characters" to <table>```
 
 ```
 let names = $("#characters").children("tbody").children("tr").children("td:nth-child(2)")
