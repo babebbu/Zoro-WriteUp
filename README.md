@@ -144,7 +144,7 @@ Proceed these following steps:
 ### GET /index.php
 
 You will find a simple HTML document. And there seems to have nothing.
-Ok, Don't give up. Let's do dictionary attack. See [Files and Directories Scanning]().
+Ok, Don't give up. Let's do dictionary attack. See ```Files and Directories Scanning``` in the next section.
 
 
 ### Files and Directories Scanning
@@ -172,6 +172,11 @@ for word in words:
 /
 /index.php
 /ziggy.php
+```
+
+### DirBuster
+```
+Document needed.
 ```
 
 ### GET :27777/ziggy.php
