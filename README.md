@@ -174,7 +174,7 @@ for word in words:
 /ziggy.php
 ```
 
-### DirBuster
+### Dictionary Scan Using DirBuster
 ```
 Document needed.
 ```
@@ -284,6 +284,11 @@ for word in words:
         if len(r.text) != previousResponseBodySize:
             print(word.strip())
 
+```
+
+### Dictionary Attack Using BurpSuite
+```
+Document needed.
 ```
 
 #### Correct Answer = Foxy
