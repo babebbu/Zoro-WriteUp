@@ -21,10 +21,16 @@ https://drive.google.com/file/d/1EUZnLexBzcDPUeRhfV3POU_H-FV-Eksd/view?usp=shari
 - NMAP
 - Netcat
 - Web Browser (with JavaScript enabled)
-- Postman
 - Python
 - Git
 - SSH
+
+## Optional Requirements
+- Postman
+- Web Shell
+- DirBuster
+- BurpSuite
+- Escalation Scripts / Toolkits
 
 ## Table of Contents
 - nmap
