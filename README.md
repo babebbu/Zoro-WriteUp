@@ -26,7 +26,7 @@ https://drive.google.com/file/d/1EUZnLexBzcDPUeRhfV3POU_H-FV-Eksd/view?usp=shari
 - Git
 - SSH
 
-## Optional Requirements
+## Optional
 - Postman
 - Web Shell
 - DirBuster
