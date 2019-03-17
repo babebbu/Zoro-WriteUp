@@ -94,9 +94,8 @@ tcpflags = syn
 
 #### Privilege Escalation and Capture The Flag
 ```
-Sudoer = franky
-Password = 3d2yhijinbe
-Executable Command = /bin/cp
+Sudoer #1 = franky; Password = 3d2yhijinbe; Executable Command = /bin/cp
+Sudoer #2 = tester; Executable Command = /bin/bash
 Flag path = /root/flag.txt
 ```
 
