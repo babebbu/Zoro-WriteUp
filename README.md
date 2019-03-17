@@ -250,7 +250,7 @@ let makeWordList = (myList) => {
 
 let wordList = makeWordList(names)
 
-console.log(names)
+console.log(wordList)
 ```
 
 ```
