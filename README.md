@@ -6,6 +6,12 @@ One Piece CTF
 
 https://drive.google.com/file/d/1EUZnLexBzcDPUeRhfV3POU_H-FV-Eksd/view?usp=sharing
 
+## Estimated time to Pwn
+
+2 <= x <= 8 hours
+
+Note: This is just a rough estimation. Some people may done it faster, Some people may done it slower.
+
 ## Vulnerabilities
 
 -   Apache2 Options +Indexes  
