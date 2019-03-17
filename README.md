@@ -2,7 +2,7 @@
 
 One Piece CTF
 
-Download VM (OVA Template)
+## Download VM (OVA Template)
 
 https://drive.google.com/file/d/1EUZnLexBzcDPUeRhfV3POU_H-FV-Eksd/view?usp=sharing
 
