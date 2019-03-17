@@ -517,6 +517,8 @@ Password: 3d2yhijinbe
 [root@ubuntu]# 
 ```
 
+## Capture The Flag
+
 ```
 [root@ubuntu]# cd /root
 [root@ubuntu]# ls
