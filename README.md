@@ -174,7 +174,7 @@ for word in words:
 /ziggy.php
 ```
 
-### Dictionary Scan Using DirBuster
+### (Optional) Dictionary Scan Using DirBuster
 ```
 Document needed.
 ```
@@ -286,7 +286,7 @@ for word in words:
 
 ```
 
-### Dictionary Attack Using BurpSuite
+### (Optional) Dictionary Attack Using BurpSuite
 ```
 Document needed.
 ```
