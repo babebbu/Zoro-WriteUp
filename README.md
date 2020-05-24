@@ -208,7 +208,7 @@ Found BrainFuck code, Let's run or compile it using online compiler.
 grandline.htb
 ```
 
-> Is that can be a DNS record?
+> Could it be a DNS record?
 
 ### DNS record
 
